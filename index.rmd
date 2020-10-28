@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "P8105 Homework 4"
 output: 
   html_document:
     toc: true
@@ -7,6 +7,12 @@ output:
     theme: cerulean
 ---
 
-# This is Jeff's awesome website
+# Welcome to my website.
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+Here is a picture of my dog, Lulu.
+
+![](https://www.instagram.com/p/BpIWz0NhyKd/)
+
+# Link to About Me page
+
+[About Me](about.html)
