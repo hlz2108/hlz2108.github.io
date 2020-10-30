@@ -21,10 +21,17 @@ data("rest_inspec")
 
 rest_inspec =
   rest_inspec %>%
-  filter(grade %in% c("A", "B", "C"), boro == "Manhattan") %>% 
   mutate(boro = str_to_title(boro)) %>% 
-  relocate(boro) %>% view
-
+  filter(grade %in% c("A", "B", "C"), boro == "Manhattan") %>% 
+  separate(inspection_date, into = c("year", "month", "day"), sep = "-") %>%
+  mutate(
+    year = as.integer(year),
+    month = as.integer(month), 
+    day = as.integer(day)
+  ) %>% 
+  relocate(boro) %>% 
+  sample_n(10000) %>% 
+  view
 ```
 
 ### Chart A
@@ -33,7 +40,7 @@ rest_inspec =
 rest_inspec %>%
   mutate(text_label = str_c("Score: ", score, "\nGrade: ", grade)) %>% 
   plot_ly(
-    x = ~inspection_date, y = ~score, type = "scatter", mode = "markers",
+    x = ~grade_date, y = ~score, type = "scatter", mode = "markers",
     color = ~grade, text = ~text_label, alpha = 0.5)
 ```
 
