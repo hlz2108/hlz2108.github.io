@@ -13,6 +13,8 @@ navbar:
       href: mailto:<helen.z@columbia.edu>
     - icon: fa-file fa-lg
       href: ./resources/HZ_Resume.pdf
+    - icon: fa-linkedin fa-lg
+      href: http://linkedin.com/in/helenlzhang
     - icon: fa-github fa-lg
       href: http://github.com/hlz2108/
 output:
