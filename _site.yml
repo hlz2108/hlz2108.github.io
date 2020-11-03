@@ -17,4 +17,4 @@ navbar:
       href: http://github.com/hlz2108/
 output:
   html_document:
-    theme: flatly
+    theme: journal
